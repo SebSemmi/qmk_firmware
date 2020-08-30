@@ -16,3 +16,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO, KC_P0, KC_P1, KC_P2, KC_P3, KC_PDOT, KC_NO, RGB_SAI, RGB_SAD, RGB_SPI, RGB_SPD, KC_NO, NK_TOGG, KC_NO, KC_TRNS, 
         KC_NO, KC_NO, KC_PENT, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_MPRV, KC_MPLY, KC_MNXT)
 };
+// layer colors
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+    case 1:
+        rgblight_enable_noeeprom();
+        rgblight_sethsv_noeeprom_orange();
+        rgblight_mode_noeeprom(1);
+        break;
+    default: //  for any other layers, or the default layer
+        rgblight_disable_noeeprom();
+        break;
+    }
+  return state;
+}
+
+// layer colors
+// layer_state_t layer_state_set_user(layer_state_t state) {
+//     switch (get_highest_layer(state)) {
+//     case 1:
+//         rgblight_sethsv_noeeprom_chartreuse();
+//         rgblight_mode_noeeprom(1);
+//         break;
+//     default: //  for any other layers, or the default layer
+//         rgblight_mode_noeeprom(9); //rainbow swirl
+//         break;
+//     }
+//   return state;
+// }
