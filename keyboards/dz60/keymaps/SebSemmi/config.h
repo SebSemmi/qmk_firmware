@@ -5,3 +5,5 @@
 
 #define VENDOR_ID 0x05ac
 #define PRODUCT_ID 0x0221
+
+#define TAPPING_TERM 175
