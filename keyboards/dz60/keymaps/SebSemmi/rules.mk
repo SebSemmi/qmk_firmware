@@ -21,6 +21,5 @@ RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
 APPLE_FN_ENABLE = yes		# Enable Apple FN-Key
-TAP_DANCE_ENABLE = yes		# Enagle Tap Dance
 
 LAYOUTS = 60_iso
